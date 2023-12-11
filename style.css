@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  padding:35px 0;
+  font-family: Helvetica, sans-serif;
+  background-color: darkgray;
+  position: relative;
+  overflow: hidden;
+}
+
+.header h1 {
+  position: static;
+  left: 25px;
+  top: 35px;
+  font-size: 45px;
+  color: rgb(255, 190, 152);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 100px;
+}
+
+.header nav {
+  position:absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 30px;
+}
+
+/* .header nav ul {
+  list-style-type: none;
+} */
+
+.header nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.header nav ul li a {
+  color: rgb(0, 0, 0, 0.6);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+.header nav ul li a span {
+  border-bottom: 5px solid rgb(0, 0, 0, 0.6);
+  padding-bottom: 5px;
+}
+
+.header nav ul li a:hover span {
+  border-color: rgb(255, 190, 152);
+  color: rgb(255, 190, 152);
+}
+
+.hero-banner {
+  position: relative;
+  background-image: url(/images/bulb-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
+}
+
+.hero-content h2 {
+  margin: 0;
+  color: rgb(255, 190, 152);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.grid-container, .new-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.grid-item, .new-grid-item {
+  border: 1px solid black;
+  padding: 10px;
+  position: relative;
+}
+
+.grid-item:first-child h2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.grid-container:nth-of-type (2) .grid-item:first-child h2 {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+.new-grid-container .new-grid-item:first-child h2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(255, 190, 152);
+}
+
+.grid-item p {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+.nested-grid {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Three rows */
+  grid-template-columns: 1fr 1fr; /* Two columns in the second and third rows */
+  grid-gap: 10px; /* Space between grid items */
+}
+
+.nested-item {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Center the text */
+}
+
+.nested-item-large {
+  grid-column: 1 / -1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nested-item-large img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.nested-item-small {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nested-item-small img {
+  max-width: 100%; /* Ensures the image doesn't exceed the container width */
+  max-height: 100%; /* Ensures the image doesn't exceed the container height */
+  object-fit: cover; /* Covers the area, might crop the image */
+}
+
+.nested-item-large img, .nested-item-small img {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.nested-item-large img:hover, .nested-item-small img:hover {
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
+  cursor: pointer; /* Changes the cursor to indicate it's interactive */
+}
+
+.new-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left column 1fr, right column 2fr */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.new-grid-item {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.new-nested-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns in a single row */
+  grid-gap: 10px; /* Space between grid items */
+}
+
+.new-nested-item {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text */
+}
+
+.new-nested-item-link {
+  color: rgb(0, 0, 0, 0.6);
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease;
+}
+
+h2 {
+  color: rgb(255, 190, 152);
+  font-family: Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+h3 {
+  color: rgb(0, 0, 0, 0.6);
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+/* .new-nested-item a {
+  color: black; /* Sets the text color to black */
+  /* text-decoration: none;
+  display: block;
+  width: 100%; /* Removes underline */
+/* } */
+
+/* Styling for links on hover */
+.new-nested-item-link:hover {
+  color: rgb(255, 190, 152); /* Text color changes to pink on hover */
+}
+
+.footer {
+  padding: 30px;
+  clear: both;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 16px;
+  color: rgb(0, 0, 0, 0.6);
+}
+  
+
+
+/* .page-section {
+
+}
+
+#about {
+
+}
+
+#about h2 {
+  color: darksalmon;
+  font-size: 25px;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
