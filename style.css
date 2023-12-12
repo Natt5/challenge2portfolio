@@ -38,17 +38,13 @@ body {
   margin-right: 30px;
 }
 
-/* .header nav ul {
-  list-style-type: none;
-} */
-
 .header nav ul li {
   display: inline-block;
   margin-left: 35px;
 }
 
 .header nav ul li a {
-  color: rgb(0, 0, 0, 0.6);
+  color: darkgray;
   text-decoration: none;
   font-weight: bold;
   font-family: Helvetica, sans-serif;
@@ -56,7 +52,7 @@ body {
 }
 
 .header nav ul li a span {
-  border-bottom: 5px solid rgb(0, 0, 0, 0.6);
+  border-bottom: 5px solid darkgray;
   padding-bottom: 5px;
 }
 
@@ -72,13 +68,13 @@ body {
   background-position: center;
   height: 200px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .hero-content {
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 50px;
   text-align: right;
   font-size: 25px;
   font-family: Helvetica, sans-serif;
@@ -89,7 +85,7 @@ body {
   color: rgb(255, 190, 152);
   background-color: rgba(0, 0, 0, 0.6);
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 50px;
 }
 
 .grid-container, .new-grid-container {
@@ -101,29 +97,32 @@ body {
 }
 
 .grid-item, .new-grid-item {
-  border: 1px solid black;
-  padding: 10px;
+  padding: 30px;
   position: relative;
+}
+
+.grid-container .grid-item:nth-child(2), .new-grid-container .new-grid-item:nth-child(2) {
+  border-left: 5px solid rgb(255, 190, 152);
 }
 
 .grid-item:first-child h2 {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 20px;
   margin: 0;
   padding-bottom: 10px;
 }
 
 .grid-container:nth-of-type (2) .grid-item:first-child h2 {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  top: 10px;
+  right: 10px;
 }
 
 .new-grid-container .new-grid-item:first-child h2 {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 20px;
   color: rgb(255, 190, 152);
 }
 
@@ -137,9 +136,9 @@ body {
 
 .nested-grid {
   display: grid;
-  grid-template-rows: auto auto auto; /* Three rows */
-  grid-template-columns: 1fr 1fr; /* Two columns in the second and third rows */
-  grid-gap: 10px; /* Space between grid items */
+  grid-template-rows: auto auto auto; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 10px; 
 }
 
 .nested-item {
@@ -147,7 +146,7 @@ body {
   padding: 10px;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Center the text */
+  overflow: hidden; 
 }
 
 .nested-item-large {
@@ -176,9 +175,9 @@ body {
 }
 
 .nested-item-small img {
-  max-width: 100%; /* Ensures the image doesn't exceed the container width */
-  max-height: 100%; /* Ensures the image doesn't exceed the container height */
-  object-fit: cover; /* Covers the area, might crop the image */
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: cover; 
 }
 
 .nested-item-large img, .nested-item-small img {
@@ -189,27 +188,53 @@ body {
 }
 
 .nested-item-large img:hover, .nested-item-small img:hover {
-  transform: scale(1.1); /* Slightly enlarges the image on hover */
-  cursor: pointer; /* Changes the cursor to indicate it's interactive */
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.nested-item-large img, .nested-item-small img {
+  width: 100%;
+  display: block; 
+}
+
+.project-description {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); 
+  color: rgb(255, 190, 152); 
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+
+.project-description h3, .project-description p {
+  color: rgb(255, 190, 152);
+  text-align: left;
 }
 
 .new-grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Left column 1fr, right column 2fr */
+  grid-template-columns: 1fr 2fr; 
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
 .new-grid-item {
-  border: 2px solid black;
   padding: 10px;
+  position: relative;
+}
+
+.new-grid-container .new-grid-item:nth-child(2) {
+  border-left: 5px solid rgb(255, 190, 152);
 }
 
 .new-nested-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns in a single row */
-  grid-gap: 10px; /* Space between grid items */
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  grid-gap: 5px;
+  padding: 30px;
 }
 
 .new-nested-item {
@@ -218,12 +243,12 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the text */
+  justify-content: center;
 }
 
 .new-nested-item-link {
   color: rgb(0, 0, 0, 0.6);
-  text-decoration: none; /* Removes underline */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -239,16 +264,8 @@ h3 {
   font-size: 25px;
 }
 
-/* .new-nested-item a {
-  color: black; /* Sets the text color to black */
-  /* text-decoration: none;
-  display: block;
-  width: 100%; /* Removes underline */
-/* } */
-
-/* Styling for links on hover */
 .new-nested-item-link:hover {
-  color: rgb(255, 190, 152); /* Text color changes to pink on hover */
+  color: rgb(255, 190, 152);
 }
 
 .footer {
