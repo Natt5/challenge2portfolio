@@ -29,7 +29,16 @@ Constant user feedback and self-learning are used to improve usability and desig
 
 ## Credits
 
-N/A
+### Image Credits
+
+Special thanks to the photographers who provided these images via Pexels:
+
+- "Light Bulb on White Panel" by [Andreea Ch](https://www.pexels.com/photo/light-bulb-on-white-panel-1166643/) from Pexels.
+- "Business Charts on Computer Screen" by [Pixabay](https://www.pexels.com/photo/business-charts-commerce-computer-265087/) from Pexels.
+- "Silver Laptop and White Cup on Table" by [Life Of Pix](https://www.pexels.com/photo/silver-laptop-and-white-cup-on-table-7974/) from Pexels.
+- "MacBook on Table" by [fauxels](https://www.pexels.com/photo/macbook-on-table-3184450/) from Pexels.
+- "Assorted iPhone Lot" by [Gabriel Freytez](https://www.pexels.com/photo/assorted-iphone-lot-341523/) from Pexels.
+
 
 ## Licence
 
